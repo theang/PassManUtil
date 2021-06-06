@@ -20,6 +20,8 @@ will create zipped file in ./build/distributions
 
 # Example
 example provided to demonstrate, which can be run like this:
+```
 ./gradlew build
 ./runPassmanUtil.sh ./example/empw.dat ./example/txnPassStore.dat ./example/passman.cnf -l
+```
 
