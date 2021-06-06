@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <value name="DataStoreClass">com.wm.app.passman.datastore.TxnDataStore</value>
+    <record name="DataStoreParams" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="fileName">config/txnPassStore.dat</value>
+    </record>
+    <value name="MasterPasswordClass">com.wm.app.passman.masterpw.EntrustMasterPassword</value>
+    <record name="MasterPwParams" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="fileName">config/empw.dat</value>
+      <value name="repeatLimit">3</value>
+      <value name="useGUI">true</value>
+    </record>
+    <record name="EncryptorInfo" javaclass="com.wm.data.ISMemDataImpl">
+      <value name="DefaultEncryptorCode">EntrustPbePlus</value>
+      <value name="SanityEncryptorCode">EntrustPbePlus</value>
+      <array name="EncryptorList" type="record" depth="1">
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="EncryptorClass">com.wm.app.passman.encryption.EncryptorImpl</value>
+        </record>
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="EncryptorClass">com.wm.app.passman.encryption.DefaultEncryptor</value>
+        </record>
+        <record javaclass="com.wm.data.ISMemDataImpl">
+          <value name="EncryptorClass">com.wm.app.passman.encryption.EntrustEncryptor</value>
+          <record name="EncryptorParams" javaclass="com.wm.data.ISMemDataImpl">
+            <value name="salt">�X�O�u��`��d3*</value>
+          </record>
+        </record>
+      </array>
+    </record>
+  </record>
+</IDataXMLCoder>
